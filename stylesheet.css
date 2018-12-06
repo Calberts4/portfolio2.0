@@ -49,24 +49,6 @@ body, html, p {
   background-image: url("hdbackground1.jpg");
   min-height: 400px;
 }
-.containter1{
-  background: url("cecileealberts-proj2.jpg");
-  overflow:hidden;
-        width:200px;
-        height:200px;
-}
-.containter1:hover{
-  background:url("CecileeAlberts_proj2.jpg");
-  overflow:visible;
-  width:100%;
-  height:100%;
-}
-.container2{
-  overflow:hidden;
-        width:200px;
-        height:200px;
-}
-
 .caption {
   position: absolute;
   left: 0;
