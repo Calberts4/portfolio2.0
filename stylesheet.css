@@ -4,6 +4,7 @@ body, html, p {
   font-family: 'Merriweather', serif;
   color: #777;
 }
+
 .arrow {
   text-align: center;
   margin: 8% 12px;
@@ -25,7 +26,6 @@ body, html, p {
     transform: translateY(-15px);
   }
 }
-
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
   opacity: 0.65;
@@ -46,8 +46,25 @@ body, html, p {
 }
 
 .bgimg-3 {
-  background-image: url("hdbackground3.jpg");
+  background-image: url("hdbackground1.jpg");
   min-height: 400px;
+}
+.containter1{
+  background: url("cecileealberts-proj2.jpg");
+  overflow:hidden;
+        width:200px;
+        height:200px;
+}
+.containter1:hover{
+  background:url("CecileeAlberts_proj2.jpg");
+  overflow:visible;
+  width:100%;
+  height:100%;
+}
+.container2{
+  overflow:hidden;
+        width:200px;
+        height:200px;
 }
 
 .caption {
