@@ -4,8 +4,10 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
       <link rel ="stylesheet" type = "text/css" href = "stylesheet.css" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+      <script src= "javascript.js"></script>
       <title>Cecilee Alberts|Portfolio</title>
     </head>
       <body>
@@ -31,12 +33,31 @@
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
     <!-- First Photo Grid-->
-      <img src="CecileeAlberts_proj2.jpg" width="153.25px" height="198.25px">
-      </div>
-
+<div class="row">
+  <div class="column">
+    <img src="CecileeAlberts_proj2.jpg" width="153.25px" height="198.25px" alt="wonderwomen" onclick="openImg(this);">
+  </div>
+  <div class="column">
+    <img src="CecileeAlberts_proj3.jpg" width="151.75px" height="197.5px" alt="Snow" onclick="openImg(this);">
+  </div>
+  <div class="column">
+    <img src="CecileeAlberts_proj5.jpg"  width="203.625px" height="158.625px" alt="Mountains" onclick="openImg(this);">
+  </div>
+  <div class="column">
+    <img src="CecileeAlberts_proj4.jpg" width="185.75px" height="90.75px" alt="Lights" onclick="openImg(this);">
+  </div>
+</div>
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
         </div>
       </div>
-    </div>
 <div class="bgimg-3">
   <div class="caption">
     <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Contact Info</span>
