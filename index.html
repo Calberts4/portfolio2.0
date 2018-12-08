@@ -4,7 +4,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
       <link rel ="stylesheet" type = "text/css" href = "stylesheet.css" />
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" type= "text/css" href = "w3stylesheet.css"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
       <script src= "javascript.js"></script>
@@ -32,21 +32,109 @@
 </div>
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <!-- First Photo Grid-->
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div style="text-align:center">
+  <p>Click on the images below:</p>
+</div>
+<!-- The four columns -->
 <div class="row">
   <div class="column">
-    <img src="CecileeAlberts_proj2.jpg" width="153.25px" height="198.25px" alt="wonderwomen" onclick="openImg(this);">
+    <img src="CecileeAlberts_proj2.jpg" style="width:100%" onclick="myFunction(this);"><span><p><b>Propaganda poster</b></p><p>This is a propaganda poster made with insperation from the Wonder women movie.</p>
+    </span>
   </div>
   <div class="column">
-    <img src="CecileeAlberts_proj3.jpg" width="151.75px" height="197.5px" alt="Snow" onclick="openImg(this);">
+    <img src="CecileeAlberts_Proj3.jpg" style="width:100%" onclick="myFunction(this);"><span><p><b>Advertisment poster</b></p><p>This poster is a made up advertisment for a VR game world I made up.</p>
+    </span>
   </div>
   <div class="column">
-    <img src="CecileeAlberts_proj5.jpg"  width="203.625px" height="158.625px" alt="Mountains" onclick="openImg(this);">
+    <img src="CecileeAlberts_proj4.jpg" style="width:100%" onclick="myFunction(this);"><span><p><b>Logo design</b></p><p>These are practice logos for a fictional company.</p></span>
   </div>
   <div class="column">
-    <img src="CecileeAlberts_proj4.jpg" width="185.75px" height="90.75px" alt="Lights" onclick="openImg(this);">
+    <img src="CecileeAlberts_proj5.jpg"  style="width:100%" onclick="myFunction(this);"><span><p><b>Logo design branding</b></p><p>This project used one of the logos I and I had to use it to make mock ups of branded products.</p></span>
+  </div>
+  <div class="column">
+    <img src="Designexsercise2_Cecilee.jpg"  style="width:100%" onclick="myFunction(this);"><span><p><b>Design exsercise</b></p><p>This is just some design exsercises using a mixture of geometric and organic shapes.</p></span>
+  </div>
+  <div class="column">
+    <img src="symbol spray_cecileeAlberts.jpg" style="width:100%" onclick="myFunction(this);"><span><p><b>Spray tool</b></p><p>These are two pieces were made with the spray tool.</p></span>
   </div>
 </div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
 <!-- The expanding image container -->
 <div class="container">
   <!-- Close the image -->
